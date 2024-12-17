@@ -1,5 +1,5 @@
 [Unit]
-Description=Traefik
+Description=My App
 Wants=network-online.target
 After=network-online.target
 
@@ -12,7 +12,7 @@ Group=root
 Type=simple
 Restart=on-failure
 RestartSec=5s
-ExecStart=/usr/local/bin/traefik --configfile /etc/traefik/traefik.yml
+ExecStart=/usr/local/bin/grpc
 
 [Install]
 WantedBy=multi-user.target

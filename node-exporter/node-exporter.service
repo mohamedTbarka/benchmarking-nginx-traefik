@@ -1,5 +1,5 @@
 [Unit]
-Description=Traefik
+Description=Node Exporter
 Wants=network-online.target
 After=network-online.target
 
@@ -7,12 +7,12 @@ StartLimitIntervalSec=500
 StartLimitBurst=5
 
 [Service]
-User=root
-Group=root
+User=node-exporter
+Group=node-exporter
 Type=simple
 Restart=on-failure
 RestartSec=5s
-ExecStart=/usr/local/bin/traefik --configfile /etc/traefik/traefik.yml
+ExecStart=/usr/local/bin/node_exporter
 
 [Install]
 WantedBy=multi-user.target
